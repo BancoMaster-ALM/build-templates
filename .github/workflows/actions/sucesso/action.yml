@@ -20,7 +20,7 @@ runs:
  
           
           # atualizar api de metrics
-          echo "PÙT API"
+          echo "PUT API"
           curl -k -X 'PUT' \
                     'https://192.168.0.92:32768/api/Evento/$GITHUB_RUN_ID' \
                     -H 'accept: text/plain' \

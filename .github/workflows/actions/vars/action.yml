@@ -1,0 +1,15 @@
+on:
+  workflow_call:
+name: Variaveis iniciais
+runs: 
+  using: 'composite'
+  steps:
+    - name: pipeline metrics
+      shell: bash
+      run: |
+        export repo_name=$(echo ${{ github.repository }} | cut -d "/"  -f2)
+        echo "http_proxy=${http_proxy}" >> $GITHUB_ENV
+        echo "https_proxy=${https_proxy}" >> $GITHUB_ENV
+        echo "no_proxy=${no_proxy}" >> $GITHUB_ENV
+        echo "gh_token=${gh_token}" >> $GITHUB_ENV
+        echo "repo_name=${repo_name}" >> $GITHUB_ENV
