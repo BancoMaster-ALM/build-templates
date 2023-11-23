@@ -12,7 +12,7 @@ runs:
       with:
         context: ./
         push: true
-        tags: your-docker-hub-username/image-name:latest
+        tags: rodrigomotadevops/${{ env.environment }}-${{env.projeto}}:latest
         registry: docker.io
-        username: ${{ secrets.DOCKER_USERNAME }}
+        username: rodrigomotadevops
         password: ${{ secrets.DOCKER_PASSWORD }}
